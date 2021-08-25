@@ -1,0 +1,336 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+
+
+}
+nav{
+	font-size: 20px;
+	font-weight: 600;
+}
+body h1{
+	margin-top: 5px;
+	text-align: center;
+}
+button{
+	font-family: 'Poppins', sans-serif;
+}
+header{
+	display:flex;
+	width:90%;
+	margin:auto;
+	height:10vh;
+	align-items: center;
+}
+
+.logo-container,.nav-links,.cart{
+	display:flex;
+}
+
+.logo-container{
+	flex:1;
+}
+.logo{
+	font-weight: 400;
+	margin:5px;
+}
+nav{
+	flex:2;
+}
+.nav-link{
+	color:#5f5f79;
+	text-decoration: none;
+}
+.nav-links{
+	justify-content: space-around;
+	list-style: none;
+}
+.cart{
+	flex:1;
+	justify-content: space-around;
+}
+.img-home{
+	height: 300px;
+	border-radius: 20px;
+	width: 400px;
+}
+.img-home:hover{
+	transition: all 0.3s ease;
+
+}
+
+.presentation{
+	display:flex;
+	width :90%;
+	margin:auto;
+	min-height:80vh;
+	align-items: center;
+}
+.introduction{
+	
+	flex:1;
+}
+.intro-text h1{
+	text-align: center;
+	font-size: 44px;
+	font-weight: 500;
+	background:linear-gradient(to right,#494964,#6f6f89);
+	-webkit-background-clip:text;
+	-webkit-text-fill-color:transparent;
+}
+.intro-text p{
+	text-align: center;
+	margin-top:5px;
+	font-size: 22px;
+	color:#585772;
+}
+.cta{
+	margin-top: 50px;
+	text-align: center;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+}
+.cta-mobile{	
+	cursor:pointer;
+	border-radius: 20px;
+	animation: drop 1.5s ease;
+	border: 2px solid black;
+	
+}
+
+
+.cover{
+	flex:0.5;height :60vh;
+}
+.specs-cover img{
+	
+	height :60vh;
+	filter:drop-shadow(0pc 5px 3px black);
+	animation: drop 1.5s ease;
+}
+
+.cover img{
+	height :100%;
+	filter:drop-shadow(0pc 5px 3px black);
+	animation: drop 1.5s ease;
+}
+.big-circle{
+	position:absolute;
+	top:0px;
+	right:0px;
+	z-index:-1;
+	opacity: 0.5;
+	height:80%;
+}
+
+.medium-circle{
+	position: absolute;
+	top:30%;
+	right:30%;
+	z-index:-1;
+	height:60%;
+	opacity:0.4;
+
+}
+.small-circle{
+	position: absolute;
+	bottom:0%;
+	left:20%;
+	z-index:-1;
+
+}
+
+.laptop-select{
+	width : 15%;
+	display:flex;
+	justify-content: space-around;
+	position: absolute;
+	right:15%;
+
+}
+
+
+@keyframes drop{
+	0%{
+		opacity:0;
+		transform:translateY(-80px);
+	}
+	100%{
+		opacity:1;
+		transform:translateY(0px);
+		
+	}
+}
+
+@media screen and (max-width:1024px){
+	.presentation{
+		flex-direction:column;
+	}
+	.introduction{
+		margin-top:5vh;
+		text-align: center;
+	}
+	.intro-text{
+		font-size:30px;
+	}
+	.intro-text p{
+		font-size: 10px
+	}
+	.cta{
+		padding:10px 0px 0px 0px;
+	}
+	.laptop-select{
+		bottom:5%;
+		right:50%;
+		width:50%;
+		transform: translate(50%,5%);
+	}
+	.cover img{
+		height:90%;
+	}
+}
+
+.specs-container{
+	width:100%;
+	flex-wrap: wrap;
+	display:flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+.head-specs{
+	font-size: 30px;
+}
+
+.specs-list{
+	margin-top: 50px;
+}
+
+.specs-image{
+	height: 300px;
+	width:300px;
+	filter:drop-shadow(0pc 5px 3px black);
+	animation: drop 1.5s ease;
+}
+
+
+
+@media (max-width:690px){
+	.specs-container{
+		display:flex;
+		flex-direction:column;
+		justify-content: space-around;
+
+	}
+	.cta{
+		padding:50px 0px 0px 0px;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+	}
+}
+
+input[type=text], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */ 
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+button[type=submit] {
+  background-color: red;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Add a background color and some padding around the form */
+.container {
+  border-radius: 5px;
+  padding: 20px;
+}
+
+
+.product-head {
+	font-size: 35px;
+
+}
+.contact-head{
+	font-size: 28px;
+}
+
+.product-row{
+	display: flex;
+	margin-top: 50px;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-around;
+	height: 100%;
+	animation: drop 1.5s ease;
+}
+
+.product-card {
+	height: 100%;
+	width: 450px;
+
+}
+
+.card-image{
+	height: 280px;
+	width: 330px;
+	margin-left: 60px;
+	animation: drop 1.5s ease;
+}
+
+.product-desc{
+	text-align: center;
+
+
+}
+.product-desc p{
+	margin-top: 20px;
+	text-align: justify;
+	padding: 10px;
+}
+
+.prod-button{
+	display: flex;
+	justify-content: space-around;
+	flex-direction: row;
+}
+
+.p-m{
+	height: 50px;
+	width: 150px;
+	border: 1px solid black;
+	color: black;
+	border-radius: 5px;
+}
+.p-l{
+	height: 50px;
+	width: 150px;
+	border: 1px solid black;
+	color: black;
+	border-radius: 5px;
+
+}
